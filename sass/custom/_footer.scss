@@ -1,0 +1,66 @@
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: $light-gray;
+    padding: 30px 100px;
+    .footer-content {
+        width: 50%;
+        nav {
+            float: left;
+        }
+        ul {
+            padding: 0;
+            li {
+                display: inline;
+                margin-right: 30px;
+                line-height: 1.5;
+                a {
+                    color: $red;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+        }
+        .icons {
+            float: left;
+            margin-top: 25px;
+            a {
+                padding: 15px;
+            }
+        }
+        p {
+            float: left;
+            margin-top: 25px;
+            padding: 15px;
+        }
+    }
+    .subscribe {
+        background: $white;
+        padding: 25px 20px;
+        border-radius: 5px;
+        p:first-child {
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        input {
+            padding: 9px;
+            width: 60%;
+            border: 1px solid $medium-gray;
+            border-radius: 4px;
+        }
+        button {
+            background: $red;
+            color: $light-gray;
+            text-transform: uppercase;
+            padding: 9px 10px;
+            border-radius: 5px;
+            border: none;
+            position: relative;
+        }
+    }
+}

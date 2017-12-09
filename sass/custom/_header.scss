@@ -1,0 +1,57 @@
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .ship {
+        color: $red;
+        font-family: $oswald;
+        margin-left: 40px;
+        h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+    }
+    .bag {
+        p {
+            line-height: 42px;
+            color: $gray;
+            text-transform: uppercase;
+            font-family: $droid;
+        }
+        img {
+            float: left;
+            margin-right: 10px;
+        }
+        span {
+            color: $red;
+        }
+    }
+}
+
+.search input {
+    background-image: url("../assets/icons/lupa.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 9px;
+    padding-left: 40px;
+    max-width: 283px;
+    width: 100%;
+    border: 1px solid $medium-gray;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+nav .container-fluid {
+    background: $purple;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    margin-top: 35px;
+    .sign {
+        color: $light-gray;
+        a {
+            color: $white;
+        }
+    }
+}

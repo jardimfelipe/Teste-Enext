@@ -1,0 +1,156 @@
+.header-section {
+    font-size: 20px;
+    font-weight: 800;
+    padding-bottom: 100px;
+}
+
+.potions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.potion {
+    width: 30%;
+    margin-bottom: 100px;
+    figcaption {
+        color: #000;
+        text-align: center;
+        font-weight: 800;
+        span {
+            color: $red;
+        }
+    }
+}
+
+// Lightbox
+ 
+.lightbox-target {
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+    overflow: hidden;
+    img {
+        margin: auto;
+        top: 0;
+        left:0;
+        right:0;
+        bottom: 0;
+        max-height: 0%;
+        max-width: 0%;
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        }
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        position: relative;
+        width: 80%;
+        height: 80%;
+        background: $white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        .left {
+            width: 60%;
+        }
+        .right {
+            width: 30%;
+            float: left;
+            padding: 10px;
+            ul {
+                display: grid;
+            }
+            h2, h3 {
+                font-family: $oswald;
+                font-weight: 800;   
+                line-height: 4;
+            }
+            h3:last-child {
+                line-height: 0 !important;
+            }
+            span {
+                color: $red;
+                font-weight: 800;
+            }
+            a {
+                display: table;
+                margin-top: 25px;
+                background: $red;
+                color: $light-gray;
+                text-transform: uppercase;
+                padding: 9px 10px;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+  
+a.lightbox-close {
+    display: block;
+    width:50px;
+    height:50px;
+    box-sizing: border-box;
+    background: white;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    top: -80px;
+    right: 0;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    &:after {
+        content: "";
+        display: block;
+        height: 30px;
+        width: 1px;
+        background: black;
+        position: absolute;
+        left: 26px;
+        top:10px;
+        -webkit-transform:rotate(-45deg);
+        -moz-transform:rotate(-45deg);
+        -o-transform:rotate(-45deg);
+        transform:rotate(-45deg);
+    }
+    &:before {
+        content: "";
+        display: block;
+        height: 30px;
+        width: 1px;
+        background: black;
+        position: absolute;
+        left: 26px;
+        top:10px;
+        -webkit-transform:rotate(45deg);
+        -moz-transform:rotate(45deg);
+        -o-transform:rotate(45deg);
+        transform:rotate(45deg);
+    }
+}  
+
+.lightbox-target:target {
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    img {
+        height: 70vh;
+        max-width: 100%;
+    }
+}
+
+.lightbox-target:target a.lightbox-close {
+    top: 0px;
+}
